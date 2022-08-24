@@ -1,0 +1,25 @@
+    <h1 class="mb-5">Lista de Edificios</h1>
+
+    <table class="table table-bordered">
+    <thead>
+    <tr>
+    <th>Id Edificio</th>
+    <th>Nombre</th>
+    <th>Direccion</th>
+    <th>Ciudad</th>
+    <th>Acciones</th>
+    </tr>
+    </thead> 
+    <tbody>
+        <% @edificios.each do |edificio| %>
+            <tr>
+                <td><%=  edificio.id %></td>
+                <td><%=  edificio.nombre %></td>
+                <td><%=  edificio.direccion %></td>
+                <td><%=  edificio.ciudad %></td>
+            </tr>
+            <% end %> 
+    </tbody>
+    </table>
+
+    <%= link_to "Crear Edificio Nuevo", new_edificio_path, class: "btn btn-primary"%> 
